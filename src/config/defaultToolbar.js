@@ -23,6 +23,9 @@ import undo from '../../images/undo.svg';
 import redo from '../../images/redo.svg';
 import subscript from '../../images/subscript.svg';
 import superscript from '../../images/superscript.svg';
+import predefinedLink from '../../images/predefined-link.svg';
+import predefinedUnLink from '../../images/predefined-unlink.svg';
+
 
 /**
 * This is default toolbar configuration,
@@ -38,6 +41,7 @@ export default {
     "textAlign",
     "colorPicker",
     "link",
+    "predefinedLink",
     "embedded",
     "emoji",
     "image",
@@ -181,6 +185,20 @@ export default {
     options: ["link", "unlink"],
     link: { icon: link, className: undefined, title: undefined },
     unlink: { icon: unlink, className: undefined, title: undefined },
+    linkCallback: undefined
+  },
+  predefinedLink: {
+    inDropdown: false,
+    className: undefined,
+    component: undefined,
+    popupClassName: undefined,
+    dropdownClassName: undefined,
+    showOpenOptionOnHover: true,
+    defaultTargetOption: "_self",
+    options: ["link", "unlink"],
+    choices: [],
+    link: { icon: predefinedLink, className: undefined, title: undefined },
+    unlink: { icon: predefinedUnLink, className: undefined, title: undefined },
     linkCallback: undefined
   },
   emoji: {

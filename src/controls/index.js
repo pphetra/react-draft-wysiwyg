@@ -11,6 +11,7 @@ import emoji from './Emoji';
 import image from './Image';
 import remove from './Remove';
 import history from './History';
+import predefinedLink from './PredefinedLink';
 
 module.exports = {
   inline,
@@ -21,6 +22,7 @@ module.exports = {
   textAlign,
   colorPicker,
   link,
+  predefinedLink,
   embedded,
   emoji,
   image,

@@ -450,7 +450,8 @@ export default class WysiwygEditor extends Component {
   };
 
   preventDefault: Function = (event: Object) => {
-    if (event.target.tagName === "INPUT" || event.target.tagName === "LABEL" || event.target.tagName === "TEXTAREA") {
+    if (event.target.tagName === "INPUT" || event.target.tagName === "LABEL" || event.target.tagName === "TEXTAREA" ||
+      event.target.tagName === "SELECT" ) {
       this.focusHandler.onInputMouseDown();
     } else {
       event.preventDefault();
@@ -519,7 +520,7 @@ export default class WysiwygEditor extends Component {
             toolbarCustomButtons.map((button, index) =>
               React.cloneElement(button, { key: index, ...controlProps })
             )}
-        </div>  
+        </div>
         )}
         <div
           ref={this.setWrapperReference}
